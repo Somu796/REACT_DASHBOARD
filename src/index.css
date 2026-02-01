@@ -1,4 +1,4 @@
-/* :root {
+:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -36,8 +36,10 @@ h1 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 40px; Try adding this to verify it's working
-} 
+  font-size: 40px;
+  /* Try adding this to verify it's working */
+
+}
 
 button {
   border-radius: 8px;
@@ -73,64 +75,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
-
-*/
-/* New css as APP.css doesn't work */
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  color: #FFFFFF;
-  background-color: #282D35;
-}
-
-.NavBar {
-  background-color: #21222A;
-  ;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 30px 25px;
-  /* height: 100; */
-
-}
-
-.NavBarLogoName {
-  color: #61DAFB;
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 100%;
-  letter-spacing: -5%;
-}
-
-main {
-  padding: 20px 30px;
-  /* border: 2px solid red; */
-}
-
-.FunFactsHeader {
-  font-weight: 700;
-  font-size: 2.44rem;
-  line-height: 100%;
-  letter-spacing: -5%;
-}
-
-span {
-  font-weight: 400;
-  font-size: 1rem;
-  letter-spacing: 0%;
-}
-
-.FunFactsList {
-  margin-top: 46px;
-  max-width: 400px;
-}
-
-.FunFactsList li {
-  margin-block: 0.625rem;
-}
-
-.FunFactsList>li::marker {
-  color: #61DAFB;
-  font-size: 1.2rem;
 }

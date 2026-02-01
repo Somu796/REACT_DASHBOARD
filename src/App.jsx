@@ -1,6 +1,4 @@
 import React from 'react';
-import Main from './components/Main';
-import Navbar from './components/Navbar';
 /**
 Challenge: Project setup
 
@@ -26,8 +24,8 @@ export default function App() {
 
     return (
         <>
-            <Navbar />
-            <Main />
+            <h1>None</h1>
+
         </>
     );
 }
