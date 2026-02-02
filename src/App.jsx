@@ -1,6 +1,6 @@
-import React from 'react';
 import Header from './components/Header';
 import Entry from './components/Entry';
+import travelData from "../data.js";
 /**
 Challenge: Project setup
 
@@ -29,14 +29,24 @@ const japan_data = {
   "dates": "12 Jan, 2021 - 24 Jan, 2021",
   "loation_description": "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
 }
+console.log(travelData)
 
 
 export default function App() {
 
+  const get_travel_data = travelData.map((location) => <Entry
+    main_img_link={location.img.src}
+    main_img_alt={location.img.alt}
+    title={location.title}
+    country={location.country}
+    google_link={location.googleMapsLink}
+    dates={location.dates}
+    description={location.text} />)
+
   return (
     <>
       <Header />
-      <Entry data={japan_data} />
+      {get_travel_data}
     </>
   );
 }
