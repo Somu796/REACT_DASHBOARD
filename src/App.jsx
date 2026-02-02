@@ -20,12 +20,14 @@ Challenge: Project setup
   works if you haven't done it before.
 */
 
+// New
+
 export default function App() {
 
-    return (
-        <>
-            <h1>None</h1>
+  return (
+    <>
+      <h1>None</h1>
 
-        </>
-    );
+    </>
+  );
 }
