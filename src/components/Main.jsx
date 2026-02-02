@@ -1,6 +1,6 @@
 const FunFacts = ["Was first released in 2013", "Was originally created by Jordan Walke", "Has well over 200K stars on GitHub", "Is maintained by Meta", "Powers thousands of enterprise apps, including mobile apps"]
 
-
+// Map function is really helping [].map(function), function can be written as (x,y,..) => x+y+z
 export default function Main() {
     return (
         <main>
