@@ -15,6 +15,7 @@
  */
 
 export default function Entry(props) {
+    console.log(props)
     const image_path = "/src/assets"
     const googlemap_txt = "View on Google Map"
     // Check if data exists
@@ -26,9 +27,9 @@ export default function Entry(props) {
                 {/* Side by Side flext*/}
                 <div className="main-image-container">
                     <img
-                        src={`${props.main_img_link}`}
+                        src={`${props.img.src}`}
                         className="main-image"
-                        alt={`image of ${props.main_img_alt}`}
+                        alt={`image of ${props.img.alt}`}
                     />
                 </div>
 
@@ -43,7 +44,7 @@ export default function Entry(props) {
                     </div>
                     <h1>{props.title}</h1>
                     <p className="entry-dates">{props.dates}</p>
-                    <p className="entry-description">{props.description}</p>
+                    <p className="entry-description">{props.text}</p>
 
                 </div>
             </article>

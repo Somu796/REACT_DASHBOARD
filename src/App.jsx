@@ -21,27 +21,20 @@ Challenge: Project setup
   You may need to do some extra research to figure out how this 
   works if you haven't done it before.
 */
-const japan_data = {
-  "location_img": "mount_fouji.png",
-  "location_name": "Mount Fuji",
-  "location_country": "Japan",
-  "location_link": "https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu",
-  "dates": "12 Jan, 2021 - 24 Jan, 2021",
-  "loation_description": "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
-}
-console.log(travelData)
-
 
 export default function App() {
 
   const get_travel_data = travelData.map((location) => <Entry
-    main_img_link={location.img.src}
-    main_img_alt={location.img.alt}
+    key={location.id}
+    // {...location} // concise but we depende on APIs parameter name while desigining
+    // (Better) Not concise but we rename it in case better pass down, later just change in one place 
+    img={location.img}
     title={location.title}
     country={location.country}
     google_link={location.googleMapsLink}
     dates={location.dates}
-    description={location.text} />)
+    text={location.text}
+  />)
 
   return (
     <>
