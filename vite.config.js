@@ -10,4 +10,12 @@ export default defineConfig({
       },
     }),
   ],
+  // Added this section for relative path mention
+  resolve: {
+    alias: {
+      src: "/src",
+      components: "/src/components",
+      assets: "/src/assets",
+    },
+  },
 })
