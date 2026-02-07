@@ -3,7 +3,7 @@ import { useState } from "react";
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
 import AddIngredientForm from "./AddIngredientForm"
-import { getRecipeFromGemini, getRecipeFromMistral } from "src/Ai"
+import { getRecipeFromMistral } from "src/Ai"
 
 export default function Main() {
 
