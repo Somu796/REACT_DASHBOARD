@@ -10,7 +10,7 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/REACT_DASHBOARD',
+  base: '/REACT_DASHBOARD/',
   // Added this section for relative path mention
   resolve: {
     alias: {
