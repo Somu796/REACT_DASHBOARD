@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import ClaudeRecipe from "./ClaudeRecipe";
 import IngredientsList from "./IngredientsList";
@@ -7,9 +7,19 @@ import { getRecipeFromMistral } from "src/Ai"
 
 export default function Main() {
 
-    const [ingredient, setIngredient] = useState([]) //"all the main spices", "pasta", "ground beef", "tomato paste"
+    const [ingredient, setIngredient] = useState(["all the main spices", "pasta", "ground beef"]) //"all the main spices", "pasta", "ground beef", "tomato paste"
     const [recipeShown, setRecipeShown] = useState(false)
     const [recipe, setRecipe] = useState("")
+    const recipeSection = useRef(null)
+    // console.log(recipeSection)
+
+    // Scroll down when new messgae is there
+    useEffect(() => {
+        // Only scroll if there is actually a recipe and the ref is attached
+        if (recipe.length > 0 && recipeSection.current !== null) {
+            recipeSection.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [recipe]);
 
     // On clicking add Ingredient access formData, perform sanity check 
     // and add in the ingredient array
@@ -46,7 +56,7 @@ export default function Main() {
     return (
         <main>
             <AddIngredientForm addIngredient={addIngredient} />
-            <IngredientsList ingredient={ingredient} recipeShown={recipeShown} handleGetRecipe={handleGetRecipe} />
+            <IngredientsList ref={recipeSection} ingredient={ingredient} recipeShown={recipeShown} handleGetRecipe={handleGetRecipe} />
             {
                 recipeShown &&
                 <ClaudeRecipe recipe={recipe} />
